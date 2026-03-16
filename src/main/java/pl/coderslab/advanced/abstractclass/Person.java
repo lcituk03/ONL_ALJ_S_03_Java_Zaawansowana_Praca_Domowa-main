@@ -1,10 +1,14 @@
-package pl.coderslab.advanced;
+package pl.coderslab.advanced.abstractclass;
 
-public class Person  {
+public class Person implements Comparable<Person> {
 
 	public Person(String firstName, String lastName) {
 		this.firstName = firstName;
 		this.lastName = lastName;
+	}
+
+	public int compareTo(Person person2){
+		return this.lastName.compareTo(person2.getLastName());
 	}
 
 	String firstName;
